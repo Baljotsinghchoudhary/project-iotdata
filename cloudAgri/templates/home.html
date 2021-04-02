@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script src="{% static 'pureknob.js' %}"></script>
+<div>
+<div class='header'>
+  
+   <h3>
+      SENSOR DATA 
+   </h3>
+</div>
+<div class='main'>
+ <div class='knob' id='knob1' >
+    <h3>TEMPERATURE (C)</h3>
+ </div>
+ <div class='knob' id='knob2'>
+    <h3>HUMIDITY (%)</h3>
+ </div>
+ <div class='knob' id='knob3'>
+    <h3>MOISTURE (%)</h3>
+ </div>
+</div>
+<div class='header'>
+   
+   <h3>
+      MOTOR STATUS
+   </h3>
+ </div>
+<div class='box'>
+   <label class="switch">
+      <input class="switch-input" type="checkbox" onclick="switchchng(this)" />
+      <span class="switch-label" data-on="MOTOR ON" data-off="MOTOR OFF"></span> 
+      <span class="switch-handle"></span> 
+   </label>
+ </div>
+<div class='header'>
+  <h3>
+     WEATHER API
+  </h3>
+</div>
+
+<div class='main'>
+<div id='wpi'>WEATHER </div>
+<div class='knob' id='knob4'>
+   <h3>TEMPERATURE (C)</h3>
+</div>
+<div class='knob' id='knob5'>
+   <h3>HUMIDITY (%)</h3>
+</div>
+<div class='knob' id='knob6'>
+   <h3>WIND SPEED (m/s)</h3>
+</div>
+</div>
+<p>This page is automatically updated.click to force reload<a href="#" style="font-size:large" onclick="hardreload()">🗘</a></p>
+</div>
+<script src="{% static 'main.js' %}"></script>
+<script>
+ 
+   
+   {% if motor_data == "ON" %}
+    document.getElementsByClassName("switch-input")[0].checked=true;
+   {% endif %}
+   setvaluesensor({{sensor_data|safe}});
+   setvalueweather({{weather_data|safe}});
+   interval=setInterval(update,500000);
+</script>
+
+{% endblock %}

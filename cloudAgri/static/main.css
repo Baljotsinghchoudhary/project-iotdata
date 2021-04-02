@@ -1,0 +1,270 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+:root
+{
+    --Primary-Text: #FFFFFF;
+    --Secondary-Text: #cfd2d6;
+    --Tertiary-Text: #acb1b8;
+    --Accent:#666D7A;
+    --Card: #1e293c;
+    --Background:#07101f;
+}
+body
+{
+	background-color: var(--Background);
+	font-size: large;
+    
+}
+.main,.header,.box
+{  width: -webkit-fit-content   ;  width: -moz-fit-content   ;  width: fit-content   ;
+    margin: 10px auto;
+    padding: 2px;
+    text-align: center;
+}
+
+#naviagtion
+{
+	text-align: center;
+	
+}
+ a
+{
+	margin: 5px;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: var(--Primary-Text);
+	text-decoration: none;
+
+}
+a:hover
+{
+	color: var(--Secondary-Text);
+}
+p
+{
+	color: var(--Secondary-Text);
+	font-size: xx-small;
+	text-align: right;
+	font-style: italic;
+}
+.knob
+{   float: left;    
+    padding:5px;
+    margin: 10px; 
+    border: 2px solid var(--Accent);
+    border-radius: 2px;
+    background-color: var(--Card);
+}
+#logo
+{
+  width: 5%;
+  height: 5%;
+  
+}
+#mainhead
+{
+	font-family: 'Stylish', sans-serif;
+	color: var(--Tertiary-Text);
+	text-align: center;
+	text-shadow : 2px 0px var(--Primary-Text);
+	margin: 2px auto;
+	
+	
+}
+
+h2
+{
+    font-family:'Roboto', sans-serif;
+    color: var(--Primary-Text);
+}
+h3
+{
+    font-family:'Lato', sans-serif;
+    color: var(--Secondary-Text);
+	text-align: center;
+}
+.main::after
+{
+    content: '';
+    display: block;
+    clear: both;
+    height: 10px;
+}
+#wpi
+{
+    font-family:'Lato', sans-serif ;
+    color: var(--Secondary-Text);
+    padding: 5px;
+    margin: 5px;
+}
+footer
+{
+    
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    
+}
+ 
+li
+{
+    list-style: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    color: var(--Tertiary-Text);
+}
+
+.chart-container
+{
+	position: relative;
+	height: 50vh;
+	width: 60vw;
+	
+}
+@media only screen and (min-width: 768px) {
+	.chart-container
+	{
+		width:60vw;
+		height:60vh;
+	}
+}
+.chartbox
+{
+	padding: 5px;
+	position: relative;
+	margin: 40px auto;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	background-color: var(--Card);
+	border: 2px solid var(--Accent);
+	
+	
+}
+
+/* switch----------
+-----------*/
+.switch {
+	
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 30px;
+	padding: 3px;
+	margin: 0 10px 10px 0;
+	background: -o-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	border-radius: 18px;
+	-webkit-box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	        box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	-webkit-box-sizing:content-box;
+	        box-sizing:content-box;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-box-sizing:content-box;
+	        box-sizing:content-box;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+	        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing:content-box;
+	        box-sizing:content-box;
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+	-webkit-box-sizing:content-box;
+	        box-sizing:content-box;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 11px;
+	color:var(--Accent);
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background:var(--Accent);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+	        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #FFFFFF), to(#f0f0f0));
+	background: -o-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	border-radius: 100%;
+	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#FFFFFF));
+	background: -o-linear-gradient(top, #eeeeee, #FFFFFF);
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+	        box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+	left: 74px;
+	-webkit-box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+	        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Transition
+========================== */
+.switch-label, .switch-handle {
+	transition: All 0.3s ease;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+}

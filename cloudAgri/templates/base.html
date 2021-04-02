@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+    <title>IOT MONITORING </title>
+    
+</head>
+
+<body  >
+     <header >
+        <h1  id='mainhead'  >
+       SMART AGRICULTURE USING CLOUD
+        </h1>
+        <div id='naviagtion'>
+           <a href="{%url 'home' %}">Home</a>
+           <a href="{% url 'past_trend' %}">Past Trend</a>
+        </div>
+     </header>
+      {%block content %}
+      {% endblock %}
+       
+       <footer>
+          <ul>
+             <li>© Copyright 2010 - 2021 </li>
+             <li>Contact us</li>
+             <li>cloud@apnamail.com</li>
+          </ul>
+         </footer>
+         
+       
+</body>
+
+</html>
