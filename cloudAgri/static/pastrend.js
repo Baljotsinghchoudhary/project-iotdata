@@ -1,5 +1,4 @@
 function draw(id,temp,moist,humid,timestamp){   
-    console.log(timestamp)
     let temp_data={ 
         label:"TEMPERATURE",
         data:temp,
