@@ -43,8 +43,10 @@ def past_trend(request):
     temp=[]
     moist=[]
     humid=[]
+    timestamp=[]
     for obj in query:
+        timestamp.append(obj.timestamp.strftime("%d/%m %H:%M"))
         temp.append(obj.information['temperature'])
         moist.append(obj.information['moisture'])
         humid.append(obj.information['humidity'])
-    return render(request,'pasttrend.html',{'temp_data':temp,'moist_data':moist,'humid_data':humid})
+    return render(request,'pasttrend.html',{'temp_data':temp,'moist_data':moist,'humid_data':humid,'timestamp':timestamp})

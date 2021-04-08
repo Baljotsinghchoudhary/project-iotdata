@@ -20,7 +20,7 @@ body
 	font-size: large;
     
 }
-.main,.header,.box
+.main,.header,.box,main-container
 {  width: -webkit-fit-content   ;  width: -moz-fit-content   ;  width: fit-content   ;
     margin: 10px auto;
     padding: 2px;
@@ -43,22 +43,23 @@ body
 a:hover
 {
 	color: var(--Secondary-Text);
+	text-decoration: underline;
 }
-p
-{
-	color: var(--Secondary-Text);
-	font-size: xx-small;
-	text-align: right;
-	font-style: italic;
-}
+
 .knob
 {   float: left;    
     padding:5px;
-    margin: 10px; 
+    margin: 10px ; 
     border: 2px solid var(--Accent);
-    border-radius: 2px;
+    border-radius: 3px;
     background-color: var(--Card);
+	
 }
+.knob:hover
+{
+	box-shadow: 0.5px 0.5px 0px var(--Primary-Text) ,-0.5px -0.5px 0px var(--Primary-Text) ;
+}
+
 #logo
 {
   width: 5%;
@@ -94,6 +95,10 @@ h3
     clear: both;
     height: 10px;
 }
+
+
+
+
 #wpi
 {
     font-family:'Lato', sans-serif ;
@@ -101,6 +106,54 @@ h3
     padding: 5px;
     margin: 5px;
 }
+.main-container
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 80%;
+	margin: 10px auto;
+   overflow-x: scroll;
+   border: 1px solid var(--Card);   
+   padding: 10px;
+}
+.forecast-box{
+	background-color:var(--Card);
+	color:var(--Primary-Text);
+	margin: 5px;
+	flex: 0 0 5em;
+	padding: 2px;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid var(--Secondary-Text);
+
+}
+
+.btn
+{
+	margin: 5px ;
+	padding: 5px;
+	text-align: center;
+}
+.btn button
+{
+	margin: 5px ;
+	border: 1px solid var(--Accent);
+	background-color: var(--Card);
+	border-radius: 2px;
+	color: var(--Secondary-Text);
+}
+.main-container::-webkit-scrollbar {
+	display: none;
+;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.main-container{
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
+
 footer
 {
     
@@ -120,11 +173,19 @@ li
     color: var(--Tertiary-Text);
 }
 
+#auto
+{
+	color: var(--Secondary-Text);
+	font-size: xx-small;
+	text-align: right;
+	font-style: italic;
+}
 .chart-container
 {
 	position: relative;
 	height: 50vh;
 	width: 80vw;
+	
 	
 }
 @media only screen and (min-width: 768px) {
@@ -144,6 +205,7 @@ li
 	width: fit-content;
 	background-color: var(--Card);
 	border: 2px solid var(--Accent);
+	box-shadow: 0 8px 6px -6px  var(--Accent);
 	
 	
 }

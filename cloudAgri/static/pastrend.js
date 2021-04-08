@@ -1,7 +1,5 @@
-function draw(id,temp,moist,humid){   
-    let xaxis=[]
-    for(let i=0;i<temp.length;i++)
-    xaxis.push(i);
+function draw(id,temp,moist,humid,timestamp){   
+    console.log(timestamp)
     let temp_data={ 
         label:"TEMPERATURE",
         data:temp,
@@ -27,18 +25,11 @@ function draw(id,temp,moist,humid){
     let myChart = new Chart(id, {
         type: 'line',
         data: {
-            labels:xaxis,
+            labels:timestamp,
             datasets:[temp_data,moist_data,humid_data ]
         },
         options:{
             maintainAspectRatio : false,
-            tooltips: {
-                callbacks: { 
-                    title: function(tooltipItem, data) { 
-                        return "";
-                     }
-                    }
-                },
             legend: {
             display: true,
             position: 'top',
@@ -62,7 +53,7 @@ function draw(id,temp,moist,humid){
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: 'Latest →',
+                    labelString: 'Time-Stamp',
                     fontSize:"20",
     
                   }

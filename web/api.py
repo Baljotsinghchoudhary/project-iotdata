@@ -7,6 +7,7 @@ from django.template.loader import render_to_string
 from .models import iot
 from django.conf import settings
 from django.core.cache import cache
+from datetime import datetime
 
 def send(msg):
     subject = 'ALERT MOISTURE-CONTENT'
@@ -95,8 +96,11 @@ def getweatherStatus():
     if result is None:
         response= requests.get(settings.API_URL)
         data=response.json();
-        result={'temp':round((data['list'][0]['main']['temp']-273.15),2),'humidity':round(data['list'][0]['main']['humidity'],2),'wind_speed':round(data['list'][0]['wind']['speed'],2),
-              'type_of_weather':data['list'][0]['weather'][0]['description']}
+        result=[]
+        for i in range(15):
+            result.append({'timestamp':datetime.fromtimestamp(data['list'][i]['dt']).strftime("%d/%m %H:%M"),'temp':round((data['list'][i]['main']['temp']-273.15),2),'humidity':round(data['list'][i]['main']['humidity'],2),'wind_speed':round(data['list'][i]['wind']['speed'],2),
+              'type_of_weather':data['list'][i]['weather'][0]['description'],'icon':data['list'][i]['weather'][0]['icon']})   
+        
         cache.set('WeatherStatus',result,timeout=10*60)
     return result
 

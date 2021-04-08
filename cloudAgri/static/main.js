@@ -33,7 +33,7 @@ function setvaluesensor(data){
 }
 
 function setvalueweather(data){
-  document.getElementById('wpi').innerHTML="WEATHER : "+data['type_of_weather'].toUpperCase();
+  document.getElementById('type').textContent=data['type_of_weather'].toUpperCase();
   knobobject[3].setValue(data['temp']);
   knobobject[4].setValue(data['humidity']);
   knobobject[5 ].setValue(data['wind_speed']);
@@ -45,7 +45,7 @@ function update(url='/get') {
       if (this.readyState == 4 && this.status == 200) {
        let result=JSON.parse(this.responseText);
        setvaluesensor(result['sensor_data'])
-       setvalueweather(result['weather_data'])
+       setvalueweather(result['weather_data']['0']);
        let check=false
        if (result['motor_data']=="ON")
        check=true
@@ -68,6 +68,14 @@ function switchchng(event) {
 }
 function hardreload(){
   update('/hardreload')
+}
+function moveleft(){
+ document.getElementsByClassName('main-container')[0].scrollLeft-=50;
+   
+}
+function moveright(){ 
+document.getElementsByClassName('main-container')[0].scrollLeft+=50;
+  
 }
 
 
