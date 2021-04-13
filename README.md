@@ -10,7 +10,7 @@ Also if the moisture of soil goes down a critical point or goes above a given po
 
 The iot device simulation is done using Node-red.
 
-## About Web App 
+## About Web And Android App 
 Display temperature ,moisture,weather of remote iot and Display weather via openweather api and remote motor on/off functionality
 
 Server update sensor data every 30 mins in its database  and weather data every 10 min in its cache
@@ -18,3 +18,4 @@ Server update sensor data every 30 mins in its database  and weather data every 
 Web data updated every 5mins (cache timeout is 5min)
 
 [WEB-APP-LINK](https://project-iotdata.herokuapp.com/)
+
