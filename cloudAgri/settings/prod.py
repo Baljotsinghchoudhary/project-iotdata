@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 PYTHON_BITNESS, LINKAGE = platform.architecture()
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -24,7 +25,7 @@ MY_CONFIG_MOTOR =json.loads(os.environ['MY_CONFIG_MOTOR'])
 MY_CONFIG_IOT = json.loads(os.environ['MY_CONFIG_IOT'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['project-iotdata.herokuapp.com','.herokuapp.com']
 
