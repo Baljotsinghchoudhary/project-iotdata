@@ -2,6 +2,7 @@ import _pickle as c
 import os
 from django.conf import settings
 
+
 def load(file_name):
     # Used for reading the data from the file having the data
     with open(file_name, 'rb') as f:
@@ -9,8 +10,10 @@ def load(file_name):
     return clf
 
 def predicting(SoilMoisture,Temperature,Humidity,Time):
-    print(settings.BASE_DIR)
-    clf_entropy = load(os.path.join(settings.BASE_DIR, 'model.mdl'))#add the address here
+    modelName="model64bit.mdl"  #default 64 bit model
+    if  settings.PYTHON_BITNESS=='32Bit':
+        fileModel="model32bit.mdl"
+    clf_entropy = load(os.path.join(settings.BASE_DIR,modelName))#add the address here
     kk = [[SoilMoisture, Temperature, Humidity, Time]]
     answer = clf_entropy.predict(kk)
     if answer[0] == 0:

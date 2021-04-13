@@ -24,7 +24,7 @@ MY_CONFIG_MOTOR =json.loads(os.environ['MY_CONFIG_MOTOR'])
 MY_CONFIG_IOT = json.loads(os.environ['MY_CONFIG_IOT'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['project-iotdata.herokuapp.com','.herokuapp.com']
 
