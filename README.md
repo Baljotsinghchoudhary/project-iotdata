@@ -19,3 +19,4 @@ Web data updated every 5mins (cache timeout is 5min)
 
 [WEB-APP-LINK](https://project-iotdata.herokuapp.com/)
 
+Android App Github Link (https://github.com/rohit04445/SmartAgricultureApp/)
