@@ -11,8 +11,10 @@ def load(file_name):
 
 def predicting(SoilMoisture,Temperature,Humidity,Time):
     modelName="model64bit.mdl"  #default 64 bit model
-    if  settings.PYTHON_BITNESS=='32Bit':
-        fileModel="model32bit.mdl"
+  
+    if  settings.PYTHON_BITNESS=='32bit':
+        modelName="model32bit.mdl"
+        
     clf_entropy = load(os.path.join(settings.BASE_DIR,modelName))#add the address here
     kk = [[SoilMoisture, Temperature, Humidity, Time]]
     answer = clf_entropy.predict(kk)
