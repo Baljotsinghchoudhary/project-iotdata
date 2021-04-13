@@ -10,7 +10,7 @@ def load(file_name):
 
 def predicting(SoilMoisture,Temperature,Humidity,Time):
     print(settings.BASE_DIR)
-    clf_entropy = load(os.path.join(settings.PROJECT_DIR, 'model.mdl'))#add the address here
+    clf_entropy = load(os.path.join(settings.BASE_DIR, 'model.mdl'))#add the address here
     kk = [[SoilMoisture, Temperature, Humidity, Time]]
     answer = clf_entropy.predict(kk)
     if answer[0] == 0:
