@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script src="{%static 'pastrend.js' %}"></script>
+
+    <h3 style="margin-top: 50px;">DATA STATISTICS</h3>
+    <div class="chartbox">
+    <div class="chart-container" >
+       
+        <canvas id="myChart"></canvas>
+        
+    </div>
+    </div>
+<script>
+    draw(document.getElementById("myChart"),{{temp_data|safe}},{{moist_data|safe}},{{humid_data|safe}},{{timestamp|safe}});
+  
+</script>
+<script>
+    
+</script>
+{% endblock%}
