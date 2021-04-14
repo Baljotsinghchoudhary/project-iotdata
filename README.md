@@ -17,10 +17,13 @@ Server update sensor data every 30 mins in its database  and weather data every 
 
 Web data updated every 5mins (cache timeout is 5min)
 
-<img src="extra/img.jpg" align="left" width="200" height="400" >
-<img src="extra/img3.jpg" align="right" width="200" height="200">
-<img src="extra/img4.jpg" align="right" width="200" height="200">
-<img src="extra/img2.jpg" align="center" >
+<img src="extra/img.jpg" align="center">
+
+<img src="extra/img3.jpg" align="center">
+
+<img src="extra/img4.jpg" align="center">
+
+<img src="extra/img2.jpg" align="center">
 
 
 [WEB-APP-LINK](https://project-iotdata.herokuapp.com/)
