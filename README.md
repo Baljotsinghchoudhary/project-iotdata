@@ -19,7 +19,7 @@ Web data updated every 5mins (cache timeout is 5min)
 
 <img src="extra/img.jpg" align="left" >
 <img src="extra/img3.jpg" align="right" >
-<img src="extra/img3.jpg" align="center" >
+<img src="extra/img2.jpg" align="center" >
 <img src="extra/img4.jpg" align="center" >
 
 [WEB-APP-LINK](https://project-iotdata.herokuapp.com/)
