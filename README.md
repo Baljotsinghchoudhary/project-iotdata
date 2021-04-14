@@ -16,15 +16,18 @@ Display temperature ,moisture,weather of remote iot and Display weather via open
 Server update sensor data every 30 mins in its database  and weather data every 10 min in its cache
 
 Web data updated every 5mins (cache timeout is 5min)
-
+<p align="center">
 <img src="extra/img.jpg" align="center">
-
+</p>
+<p align="center">
 <img src="extra/img3.jpg" align="center">
-
+</p>
+<p align="center">
 <img src="extra/img4.jpg" align="center">
-
+</p>
+<p align="center">
 <img src="extra/img2.jpg" align="center">
-
+</p>
 
 [WEB-APP-LINK](https://project-iotdata.herokuapp.com/)
 
