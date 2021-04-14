@@ -17,6 +17,11 @@ Server update sensor data every 30 mins in its database  and weather data every 
 
 Web data updated every 5mins (cache timeout is 5min)
 
+![ScreenShot](extra/img.jpg)
+![ScreenShot](extra/img2.jpg)
+![ScreenShot](extra/img3.jpg)
+![ScreenShot](extra/img4.jpg)
+
 [WEB-APP-LINK](https://project-iotdata.herokuapp.com/)
 
 Android App Github Link (https://github.com/rohit04445/SmartAgricultureApp/)

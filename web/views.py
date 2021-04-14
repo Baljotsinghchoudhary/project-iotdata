@@ -7,6 +7,7 @@ from django.core.cache import cache
 from .api import getSensordata,getmotorStatus,getweatherStatus,sendCommand,hardupdate
 from web.prediction import predicting
 
+
 # Create your views here.
 
 def home(request):
